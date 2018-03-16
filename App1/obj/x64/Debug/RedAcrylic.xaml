@@ -1,0 +1,39 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:App1">
+
+
+
+
+
+
+    <ResourceDictionary.ThemeDictionaries>
+        <ResourceDictionary x:Key="Default">
+            <AcrylicBrush x:Key="RedAcrylic"
+            BackgroundSource="HostBackdrop"
+            TintColor="#680707"
+            TintOpacity="0.6"
+            FallbackColor="#680707"/>
+        </ResourceDictionary>
+
+        <ResourceDictionary x:Key="HighContrast">
+            <SolidColorBrush x:Key="RedAcrylic"
+            Color="{ThemeResource SystemColorWindowColor}"/>
+        </ResourceDictionary>
+
+        <ResourceDictionary x:Key="Light">
+            <AcrylicBrush x:Key="RedAcrylic"
+            BackgroundSource="HostBackdrop"
+            TintColor="#680707"
+            TintOpacity="0.6"
+            FallbackColor="#680707"/>
+        </ResourceDictionary>
+    </ResourceDictionary.ThemeDictionaries>
+
+
+
+
+
+</ResourceDictionary>
+

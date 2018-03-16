@@ -1,0 +1,96 @@
+﻿<Page
+    x:Class="App1.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:App1"
+    xmlns:lottieUwp="using:LottieUWP"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:controls="using:Microsoft.Toolkit.Uwp.UI.Controls"
+    mc:Ignorable="d">
+
+
+    <Page.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="RedAcrylic.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Page.Resources>
+
+
+
+    <Grid Background="{StaticResource RedAcrylic}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="48"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        
+        <Grid Grid.Row="0"
+              Background="{StaticResource RedAcrylic}">
+            <TextBlock Text="IT Home" 
+                       FontSize="20" 
+                       IsColorFontEnabled="True"
+                       Foreground="White"
+                       HorizontalAlignment="Center" 
+                       VerticalAlignment="Center" />
+        </Grid>
+
+
+        
+
+
+
+        <NavigationView x:ConnectionId='1' x:Name="appNavi"
+                        Grid.Row="1"
+                        OpenPaneLength="200"
+                        AlwaysShowHeader="False"
+                                               
+                                                                   
+                                                         
+                        Padding="20,0,0,0"
+                        Margin="20,0,0,0"
+                        Background="{StaticResource RedAcrylic}">
+            <NavigationView.MenuItems>
+                <NavigationViewItem Foreground="White" Content="News Feed" Icon="ViewAll" Tag="update"/>
+                <NavigationViewItem Foreground="White" Content="Shopping" Icon="Audio" Tag="defender"/>
+                <NavigationViewItem Foreground="White" Content="Forum" Icon="People" Tag="backup"/>
+                <NavigationViewItem Foreground="White" Content="Me" Icon="Contact" Tag="trouble"/>
+            </NavigationView.MenuItems>
+
+
+            <Grid Background="{StaticResource RedAcrylic}"
+              Padding="20,10,10,10"
+              >
+                <controls:DropShadowPanel BlurRadius="25"
+                                      ShadowOpacity="0.7"
+                                      OffsetX="3"
+                                      OffsetY="3"
+                                      Color="Black"
+                                      VerticalAlignment="Stretch"
+                                      HorizontalAlignment="Stretch"
+                                      VerticalContentAlignment="Stretch"
+                                      HorizontalContentAlignment="Stretch"
+                                      Margin="0">
+                    <Grid Background="{ThemeResource SystemControlAcrylicWindowMediumHighBrush}"
+                      CornerRadius="10">
+                        <Frame x:ConnectionId='2' x:Name="contentFrame">
+
+                        </Frame>
+                        <Image x:ConnectionId='3' Source="ms-appx:///Assets/fluent.png" 
+                               VerticalAlignment="Center" 
+                               HorizontalAlignment="Center" 
+                               Height="250" 
+                               Opacity="0.6"
+                               x:Name="UselessImg"/>
+                    </Grid>
+
+                </controls:DropShadowPanel>
+            </Grid>
+        </NavigationView>
+
+    </Grid>
+    
+</Page>
+
