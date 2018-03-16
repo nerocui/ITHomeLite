@@ -44,7 +44,8 @@ namespace App1
                 NavigationViewItem item = args.SelectedItem as NavigationViewItem;
                 NavView_Navigate(item);
             }
-            UselessImg.Visibility = Visibility.Collapsed;
+            //MyLottieMain.AutoPlay = false;
+            //MyLottieMain.Visibility = Visibility.Collapsed;
         }
 
         private void appNavi_ItemInvoked(NavigationView sender, NavigationViewItemInvokedEventArgs args)
@@ -60,7 +61,8 @@ namespace App1
                 NavView_Navigate(item as NavigationViewItem);
 
             }
-            UselessImg.Visibility = Visibility.Collapsed;
+            MyLottieMain.AutoPlay = false;
+            MyLottieMain.Visibility = Visibility.Collapsed;
         }
 
 

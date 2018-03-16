@@ -577,6 +577,18 @@
     <AppxPackagedFile Include="C:\Users\Nero\.nuget\packages\win2d.uwp\1.21.0\lib\uap10.0\Microsoft.Graphics.Canvas.winmd">
       <PackagePath>Microsoft.Graphics.Canvas.winmd</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Nero\source\repos\App1\App1\Assets\loading.json">
+      <PackagePath>Assets\loading.json</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Nero\source\repos\App1\App1\Assets\veil.json">
+      <PackagePath>Assets\veil.json</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Nero\source\repos\App1\App1\Assets\computer_display.json">
+      <PackagePath>Assets\computer_display.json</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Nero\source\repos\App1\App1\Assets\empty_status.json">
+      <PackagePath>Assets\empty_status.json</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Nero\source\repos\App1\App1\Assets\beupic.jpg">
       <PackagePath>Assets\beupic.jpg</PackagePath>
     </AppxPackagedFile>

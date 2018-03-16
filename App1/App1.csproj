@@ -124,7 +124,10 @@
       <SubType>Designer</SubType>
     </AppxManifest>
     <None Include="App1_TemporaryKey.pfx" />
-    <None Include="Assets\veil.json" />
+    <Content Include="Assets\loading.json" />
+    <Content Include="Assets\veil.json" />
+    <Content Include="Assets\computer_display.json" />
+    <Content Include="Assets\empty_status.json" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Assets\beupic.jpg" />

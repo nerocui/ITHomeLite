@@ -8,15 +8,16 @@
     xmlns:an="using:Microsoft.Toolkit.Uwp.UI.Animations"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     Loaded="Page_Loaded"
+    xmlns:lottieUwp="using:LottieUWP"
     mc:Ignorable="d">
 
 
     <Page.Resources>
         <DataTemplate x:DataType="local:News" x:Key="NewsTemplate">
             <Button Background="Transparent"
-                            Padding="2"
-                            Style="{StaticResource ButtonRevealStyle}"
-                            BorderThickness="0">
+                    Style="{StaticResource ButtonRevealStyle}"
+                    BorderThickness="0"
+                    Margin="0">
                 <Grid>
                     <Image Source="{x:Bind _first_pic_url}"
                                    x:Name="ArticleImg"
@@ -46,7 +47,7 @@
         </DataTemplate>
     </Page.Resources>
 
-    <Grid Padding="3">
+    <Grid>
 
         <controls:AdaptiveGridView Name="AdaptiveGridViewControl"
                                    OneRowModeEnabled="False"
@@ -63,11 +64,12 @@
         
         <ProgressRing Name="MyProgressRing"
                       Width="100"
-                      Visibility="Visible"
+                      Visibility="Collapsed"
                       Opacity="1"
                       Height="100"
                       Foreground="White"
                       VerticalAlignment="Center"
                       HorizontalAlignment="Center" />
+        
     </Grid>
 </Page>

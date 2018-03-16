@@ -45,9 +45,7 @@ namespace App1
 
             MyProgressRing.Visibility = Visibility.Visible;
 
-
-            //StartWebRequest();
-            //ObservableCollection<News> results = new ObservableCollection<News>();
+            
 
             request = (HttpWebRequest)WebRequest.Create("https://www.ithome.com/rss/");
             request.UserAgent = @"Mozilla/5.0 (Windows NT 6.2; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/32.0.1667.0 Safari/537.36";
@@ -80,99 +78,16 @@ namespace App1
                 News news = new News(title, link, time, description);
                 NewsList.Add(news);
             }
-
             
             MyProgressRing.IsActive = false;
 
             MyProgressRing.Visibility = Visibility.Collapsed;
-
+            
 
 
         }
 
-
-        public void StartWebRequest()
-        {
-            request = (HttpWebRequest)WebRequest.Create("https://www.ithome.com/rss/");
-            request.UserAgent = @"Mozilla/5.0 (Windows NT 6.2; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/32.0.1667.0 Safari/537.36";
-
-            request.BeginGetResponse(new AsyncCallback(FinishWebRequest), null);
-        }
-
-        public void FinishWebRequest(IAsyncResult result)
-        {
-            ObservableCollection<News> results = new ObservableCollection<News>();
-
-            HttpWebResponse response = (result.AsyncState as HttpWebRequest).EndGetResponse(result) as HttpWebResponse;
-            Stream receiveStream = response.GetResponseStream();
-
-            // Pipes the stream to a higher level stream reader with the required encoding format. 
-            StreamReader readStream = new StreamReader(receiveStream, Encoding.UTF8);
-            string temp = readStream.ReadToEnd();
-
-
-            XmlDocument doc = new XmlDocument();
-            doc.LoadXml(temp);
-            XmlNodeList nodeList;
-            XmlNode root = doc.DocumentElement;
-            nodeList = root.SelectNodes("//item");
-
-            foreach (XmlNode item in nodeList)
-            {
-
-                string title = item.SelectSingleNode("title").InnerXml;
-                string link = item.SelectSingleNode("link").InnerXml;
-                string time = item.SelectSingleNode("pubDate").InnerXml;
-                string description = item.SelectSingleNode("description").InnerXml;
-                News news = new News(title, link, time, description);
-                results.Add(news);
-            }
-            NewsList = results;
-        }
-
-        public void RefreshPage()
-        {
-
-            //StartWebRequest();
-            /*
-            ObservableCollection<News> result = new ObservableCollection<News>();
-
-            request = (HttpWebRequest)WebRequest.Create("https://www.ithome.com/rss/");
-            request.UserAgent = @"Mozilla/5.0 (Windows NT 6.2; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/32.0.1667.0 Safari/537.36";
-            WebResponse response = request.GetResponse();
-            // Get the stream associated with the response.
-            Stream receiveStream = response.GetResponseStream();
-
-            // Pipes the stream to a higher level stream reader with the required encoding format. 
-            StreamReader readStream = new StreamReader(receiveStream, Encoding.UTF8);
-            string temp = readStream.ReadToEnd();
-
-
-            XmlDocument doc = new XmlDocument();
-            doc.LoadXml(temp);
-            XmlNodeList nodeList;
-            XmlNode root = doc.DocumentElement;
-            nodeList = root.SelectNodes("//item");
-
-            foreach (XmlNode item in nodeList)
-            {
-                
-                string title = item.SelectSingleNode("title").InnerXml;
-                string link = item.SelectSingleNode("link").InnerXml;
-                string time = item.SelectSingleNode("pubDate").InnerXml;
-                string description = item.SelectSingleNode("description").InnerXml;
-                News news = new News(title, link, time, description);
-                result.Add(news);
-            }
-            NewsList = result;
-            */
-        }
-
-        private void GridView_ItemClick(object sender, ItemClickEventArgs e)
-        {
-
-        }
-
+        
         private void AdaptiveGridViewControl_ItemClick(object sender, ItemClickEventArgs e)
         {
 

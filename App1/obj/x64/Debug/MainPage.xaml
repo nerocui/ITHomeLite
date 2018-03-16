@@ -29,12 +29,24 @@
         
         <Grid Grid.Row="0"
               Background="{StaticResource RedAcrylic}">
-            <TextBlock Text="IT Home" 
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+
+                <lottieUwp:LottieAnimationView x:ConnectionId='4' 
+                                x:Name="MyLottieIcon"
+                                FileName="Assets/empty_status.json"
+                                RepeatCount="-1"
+                                AutoPlay="True"
+                                RepeatMode="Reverse"
+                                Height="32"
+                                VerticalAlignment="Center"/>
+
+                <TextBlock Text="IT Home" 
                        FontSize="20" 
                        IsColorFontEnabled="True"
                        Foreground="White"
-                       HorizontalAlignment="Center" 
                        VerticalAlignment="Center" />
+            </StackPanel>
+            
         </Grid>
 
 
@@ -49,8 +61,7 @@
                                                
                                                                    
                                                          
-                        Padding="20,0,0,0"
-                        Margin="20,0,0,0"
+                        Margin="10,0,0,0"
                         Background="{StaticResource RedAcrylic}">
             <NavigationView.MenuItems>
                 <NavigationViewItem Foreground="White" Content="News Feed" Icon="ViewAll" Tag="update"/>
@@ -78,12 +89,16 @@
                         <Frame x:ConnectionId='2' x:Name="contentFrame">
 
                         </Frame>
-                        <Image x:ConnectionId='3' Source="ms-appx:///Assets/fluent.png" 
-                               VerticalAlignment="Center" 
-                               HorizontalAlignment="Center" 
-                               Height="250" 
-                               Opacity="0.6"
-                               x:Name="UselessImg"/>
+                        <lottieUwp:LottieAnimationView x:ConnectionId='3' 
+                                x:Name="MyLottieMain"
+                                FileName="Assets/computer_display.json"
+                                RepeatCount="-1"
+                                AutoPlay="True"
+                                Width="800"
+                                Margin="100,0,0,0"
+                                RepeatMode="Reverse"
+                                VerticalAlignment="Center"
+                                HorizontalAlignment="Center"/>
                     </Grid>
 
                 </controls:DropShadowPanel>
