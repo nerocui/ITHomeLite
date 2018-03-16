@@ -1,3 +1,3 @@
 # ITHomeLite
 A light, third-party UWP of ITHome
-![Alt text](ITHome Lite.png)
+![Alt text](ITHomeLite/IThome Lite.png )
