@@ -8,69 +8,85 @@
     xmlns:an="using:Microsoft.Toolkit.Uwp.UI.Animations"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
                         
-    xmlns:lottieUwp="using:LottieUWP"
+    RequestedTheme="Light"
     mc:Ignorable="d">
 
 
     <Page.Resources>
         <DataTemplate                         x:Key="NewsTemplate">
-            <Button x:ConnectionId='2' Background="Transparent"
-                    Style="{StaticResource ButtonRevealStyle}"
-                    BorderThickness="0"
-                    Margin="0">
-                <Grid>
-                    <Image x:ConnectionId='3'                                 
+
+            <Grid x:ConnectionId='2' Margin="0" BorderThickness="0" x:Name="UpdateItem">
+                <Image x:ConnectionId='3'                                 
                                    x:Name="ArticleImg"
                                    HorizontalAlignment="Center"
                                    VerticalAlignment="Center"
                                    Stretch="UniformToFill"/>
-                    <Grid HorizontalAlignment="Left"
-                                  VerticalAlignment="Top"
-                                  Background="{ThemeResource SystemControlAccentAcrylicElementAccentMediumHighBrush}"
-                                  Margin="0,20,0,0">
-                        <TextBlock x:ConnectionId='5'                      
-                                           FontSize="14"/>
-                    </Grid>
+                <Grid HorizontalAlignment="Left"
+                      VerticalAlignment="Top"
+                      Background="{ThemeResource SystemControlAccentAcrylicElementAccentMediumHighBrush}"
+                      Margin="0,20,0,0">
+                    <TextBlock x:ConnectionId='6'                      
+                               Margin="6,3,6,3"
+                               FontSize="14"/>
+                </Grid>
 
-                    <Grid HorizontalAlignment="Stretch" VerticalAlignment="Bottom"
-                                  Padding="3"
-                                    Background="{ThemeResource SystemControlChromeHighAcrylicElementMediumBrush }">
-                        <TextBlock x:ConnectionId='4'                        
-                                           HorizontalAlignment="Center" 
-                                           VerticalAlignment="Bottom"
-                                           TextWrapping="Wrap"
-                                           FontSize="16"/>
-                    </Grid>
+                <Grid HorizontalAlignment="Stretch" 
+                      VerticalAlignment="Bottom"
+                      Padding="3"
+                      x:Name="UpdateItemBottomPanel"
+                      Background="{ThemeResource SystemControlChromeHighAcrylicElementMediumBrush}">
+                    <StackPanel>
+
+                        <TextBlock x:ConnectionId='4'                       
+                                       x:Name="UpdateTitle"
+                                       HorizontalAlignment="Center" 
+                                       VerticalAlignment="Bottom"
+                                       TextWrapping="Wrap"
+                                       FontSize="16"/>
+
+                        <TextBlock x:ConnectionId='5'                         
+                                       Padding="3"
+                                       HorizontalAlignment="Stretch"
+                                       VerticalAlignment="Bottom"
+                                       TextWrapping="Wrap"
+                                       MaxLines="3"
+                                       Height="50"
+                                       FontSize="10"
+                                   Foreground="Gray"/>
+                    </StackPanel>
 
                 </Grid>
-            </Button>
+
+            </Grid>
         </DataTemplate>
     </Page.Resources>
 
     <Grid>
 
-        <controls:AdaptiveGridView x:ConnectionId='6' Name="AdaptiveGridViewControl"
+        <controls:AdaptiveGridView x:ConnectionId='7' Name="AdaptiveGridViewControl"
                                    OneRowModeEnabled="False"
-                                   ItemHeight="200"
+                                   ItemHeight="250"
                                    DesiredWidth="300"
                                    SelectionMode="Single"
+                                   
+                                                                          
                                    IsItemClickEnabled="True"
                                                                   
                                                                                 
                                    ItemTemplate="{StaticResource NewsTemplate}">
-            
+
 
         </controls:AdaptiveGridView>
-        
-        <ProgressRing x:ConnectionId='7' Name="MyProgressRing"
-                      Width="100"
+
+        <ProgressRing x:ConnectionId='8' Name="MyProgressRing"
+                      Width="50"
                       Visibility="Collapsed"
                       Opacity="1"
-                      Height="100"
-                      Foreground="White"
+                      Height="50"
+                      Foreground="Red"
                       VerticalAlignment="Center"
                       HorizontalAlignment="Center" />
-        
+
     </Grid>
 </Page>
 

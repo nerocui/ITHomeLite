@@ -1,4 +1,5 @@
 ﻿using App1.Models;
+using Microsoft.Toolkit.Parsers.Rss;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -6,6 +7,7 @@ using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Net;
+using System.Net.Http;
 using System.Runtime.InteropServices.WindowsRuntime;
 using System.Text;
 using System.Threading.Tasks;
@@ -18,6 +20,7 @@ using Windows.UI.Xaml.Controls.Primitives;
 using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
+using Windows.UI.Xaml.Media.Animation;
 using Windows.UI.Xaml.Navigation;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
@@ -31,66 +34,96 @@ namespace App1
     {
         public ObservableCollection<News> NewsList { get; set; }
         public HttpWebRequest request;
-
+        public News _storeditem;
         public UpdatePage()
         {
             this.InitializeComponent();
             //RefreshPage();
             NewsList = new ObservableCollection<News>();
+            this.NavigationCacheMode = NavigationCacheMode.Enabled;
         }
         
         private async void Page_Loaded(object sender, RoutedEventArgs e)
         {
-            MyProgressRing.IsActive = true;
-
-            MyProgressRing.Visibility = Visibility.Visible;
-
-            
-
-            request = (HttpWebRequest)WebRequest.Create("https://www.ithome.com/rss/");
-            request.UserAgent = @"Mozilla/5.0 (Windows NT 6.2; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/32.0.1667.0 Safari/537.36";
-            var response = (HttpWebResponse)await Task.Factory
-                            .FromAsync<WebResponse>(request.BeginGetResponse,
-                            request.EndGetResponse,
-                            null);
-            Debug.Assert(response.StatusCode == HttpStatusCode.OK);
-            Stream receiveStream = response.GetResponseStream();
-
-
-
-            StreamReader readStream = new StreamReader(receiveStream, Encoding.UTF8);
-            string temp = readStream.ReadToEnd();
-
-
-            XmlDocument doc = new XmlDocument();
-            doc.LoadXml(temp);
-            XmlNodeList nodeList;
-            XmlNode root = doc.DocumentElement;
-            nodeList = root.SelectNodes("//item");
-
-            foreach (XmlNode item in nodeList)
+            if (!App.refreshed)
             {
+                MyProgressRing.IsActive = true;
+                MyProgressRing.Visibility = Visibility.Visible;
+                string feed = null;
+                using (var client = new HttpClient())
+                {
+                    try
+                    {
+                        feed = await client.GetStringAsync("https://www.ithome.com/rss/");
+                    }
+                    catch { }
+                }
 
-                string title = item.SelectSingleNode("title").InnerXml;
-                string link = item.SelectSingleNode("link").InnerXml;
-                string time = item.SelectSingleNode("pubDate").InnerXml;
-                string description = item.SelectSingleNode("description").InnerXml;
-                News news = new News(title, link, time, description);
-                NewsList.Add(news);
+                if (feed != null)
+                {
+                    var parser = new RssParser();
+                    var rss = parser.Parse(feed);
+
+                    foreach (var element in rss)
+                    {
+                        string title = element.Title;
+                        if (title.Contains("辣品"))
+                            continue;
+                        string link = element.FeedUrl;
+                        string time = element.PublishDate.ToString();
+                        string description = element.Content;
+                        string picurl = element.ImageUrl;
+                        string summary = element.Summary;
+                        string author = element.Author;
+                        News news = new News(title, link, time, description, picurl, summary, author);
+                        NewsList.Add(news);
+                    }
+                }
+                MyProgressRing.IsActive = false;
+                MyProgressRing.Visibility = Visibility.Collapsed;
+                App.refreshed = true;
             }
             
-            MyProgressRing.IsActive = false;
+        }
 
-            MyProgressRing.Visibility = Visibility.Collapsed;
-            
 
+        private async void DisplayNoWifiDialog(string value)
+        {
+            ContentDialog noWifiDialog = new ContentDialog
+            {
+                Title = "No wifi connection",
+                Content = value,
+                CloseButtonText = "Ok"
+            };
+
+            ContentDialogResult result = await noWifiDialog.ShowAsync();
+        }
+
+
+        private void AdaptiveGridViewControl_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            News n = e.ClickedItem as News;
+            //var animation = pre
+            AdaptiveGridViewControl.PrepareConnectedAnimation("animation1", n, "UpdateItem");
+            _storeditem = n;
+            Frame.Navigate(typeof(DetailPage), n);
 
         }
 
-        
-        private void AdaptiveGridViewControl_ItemClick(object sender, ItemClickEventArgs e)
+        private async void AdaptiveGridViewControl_Loaded(object sender, RoutedEventArgs e)
         {
-
+            if(AdaptiveGridViewControl != null && App.refreshed)
+            {
+                AdaptiveGridViewControl.ScrollIntoView(_storeditem, ScrollIntoViewAlignment.Default);
+                AdaptiveGridViewControl.UpdateLayout();
+                ConnectedAnimation animation2 = ConnectedAnimationService.GetForCurrentView().GetAnimation("animation2");
+                if (animation2 != null)
+                {
+                    await AdaptiveGridViewControl.TryStartConnectedAnimationAsync(animation2, _storeditem, "UpdateItem");
+                }
+            }
+            
+            
         }
     }
 }

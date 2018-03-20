@@ -589,6 +589,9 @@
     <AppxPackagedFile Include="C:\Users\Nero\source\repos\App1\App1\Assets\empty_status.json">
       <PackagePath>Assets\empty_status.json</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Nero\source\repos\App1\App1\Assets\phonological.json">
+      <PackagePath>Assets\phonological.json</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Nero\source\repos\App1\App1\Assets\beupic.jpg">
       <PackagePath>Assets\beupic.jpg</PackagePath>
     </AppxPackagedFile>

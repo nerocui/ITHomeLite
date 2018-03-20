@@ -204,97 +204,101 @@ namespace App1.App1_XamlTypeInfo
 
         private void InitTypeTables()
         {
-            _typeNameTable = new string[44];
+            _typeNameTable = new string[46];
             _typeNameTable[0] = "App1.Article";
             _typeNameTable[1] = "Windows.UI.Xaml.Controls.UserControl";
             _typeNameTable[2] = "String";
             _typeNameTable[3] = "App1.BackupPage";
             _typeNameTable[4] = "Windows.UI.Xaml.Controls.Page";
             _typeNameTable[5] = "App1.DefenderPage";
-            _typeNameTable[6] = "Microsoft.Toolkit.Uwp.UI.Controls.DropShadowPanel";
-            _typeNameTable[7] = "Windows.UI.Xaml.Controls.ContentControl";
-            _typeNameTable[8] = "Double";
-            _typeNameTable[9] = "Windows.UI.Color";
-            _typeNameTable[10] = "System.ValueType";
-            _typeNameTable[11] = "Object";
-            _typeNameTable[12] = "Windows.UI.Composition.DropShadow";
-            _typeNameTable[13] = "Windows.UI.Composition.CompositionShadow";
-            _typeNameTable[14] = "Windows.UI.Composition.CompositionObject";
-            _typeNameTable[15] = "Windows.UI.Composition.CompositionBrush";
-            _typeNameTable[16] = "LottieUWP.LottieAnimationView";
-            _typeNameTable[17] = "Int32";
-            _typeNameTable[18] = "Boolean";
-            _typeNameTable[19] = "LottieUWP.RepeatMode";
-            _typeNameTable[20] = "System.Enum";
-            _typeNameTable[21] = "LottieUWP.LottieAnimationView.CacheStrategy";
-            _typeNameTable[22] = "LottieUWP.FontAssetDelegate";
-            _typeNameTable[23] = "LottieUWP.TextDelegate";
-            _typeNameTable[24] = "LottieUWP.LottieDrawable";
-            _typeNameTable[25] = "LottieUWP.LottieComposition";
-            _typeNameTable[26] = "Single";
-            _typeNameTable[27] = "LottieUWP.IImageAssetDelegate";
-            _typeNameTable[28] = "Int64";
-            _typeNameTable[29] = "LottieUWP.PerformanceTracker";
-            _typeNameTable[30] = "App1.MainPage";
-            _typeNameTable[31] = "App1.SettingsPage";
-            _typeNameTable[32] = "App1.TroubleshootPage";
-            _typeNameTable[33] = "Microsoft.Toolkit.Uwp.UI.Controls.AdaptiveGridView";
-            _typeNameTable[34] = "Windows.UI.Xaml.Controls.GridView";
-            _typeNameTable[35] = "Windows.UI.Xaml.Controls.ItemsControl";
-            _typeNameTable[36] = "System.Windows.Input.ICommand";
-            _typeNameTable[37] = "Windows.UI.Xaml.Controls.ItemsPanelTemplate";
-            _typeNameTable[38] = "App1.UpdatePage";
-            _typeNameTable[39] = "System.Collections.ObjectModel.ObservableCollection`1<App1.Models.News>";
-            _typeNameTable[40] = "System.Collections.ObjectModel.Collection`1<App1.Models.News>";
-            _typeNameTable[41] = "App1.Models.News";
-            _typeNameTable[42] = "Microsoft.Toolkit.Uwp.UI.Extensions.NavigationViewExtensions";
-            _typeNameTable[43] = "Windows.UI.Xaml.Controls.NavigationView";
+            _typeNameTable[6] = "App1.DetailPage";
+            _typeNameTable[7] = "Microsoft.Toolkit.Uwp.UI.Controls.DropShadowPanel";
+            _typeNameTable[8] = "Windows.UI.Xaml.Controls.ContentControl";
+            _typeNameTable[9] = "Double";
+            _typeNameTable[10] = "Windows.UI.Color";
+            _typeNameTable[11] = "System.ValueType";
+            _typeNameTable[12] = "Object";
+            _typeNameTable[13] = "Windows.UI.Composition.DropShadow";
+            _typeNameTable[14] = "Windows.UI.Composition.CompositionShadow";
+            _typeNameTable[15] = "Windows.UI.Composition.CompositionObject";
+            _typeNameTable[16] = "Windows.UI.Composition.CompositionBrush";
+            _typeNameTable[17] = "LottieUWP.LottieAnimationView";
+            _typeNameTable[18] = "Int32";
+            _typeNameTable[19] = "Boolean";
+            _typeNameTable[20] = "LottieUWP.RepeatMode";
+            _typeNameTable[21] = "System.Enum";
+            _typeNameTable[22] = "LottieUWP.LottieAnimationView.CacheStrategy";
+            _typeNameTable[23] = "LottieUWP.FontAssetDelegate";
+            _typeNameTable[24] = "LottieUWP.TextDelegate";
+            _typeNameTable[25] = "LottieUWP.LottieDrawable";
+            _typeNameTable[26] = "LottieUWP.LottieComposition";
+            _typeNameTable[27] = "Single";
+            _typeNameTable[28] = "LottieUWP.IImageAssetDelegate";
+            _typeNameTable[29] = "Int64";
+            _typeNameTable[30] = "LottieUWP.PerformanceTracker";
+            _typeNameTable[31] = "App1.MainPage";
+            _typeNameTable[32] = "App1.SettingsPage";
+            _typeNameTable[33] = "App1.TroubleshootPage";
+            _typeNameTable[34] = "Microsoft.Toolkit.Uwp.UI.Controls.AdaptiveGridView";
+            _typeNameTable[35] = "Windows.UI.Xaml.Controls.GridView";
+            _typeNameTable[36] = "Windows.UI.Xaml.Controls.ItemsControl";
+            _typeNameTable[37] = "System.Windows.Input.ICommand";
+            _typeNameTable[38] = "Windows.UI.Xaml.Controls.ItemsPanelTemplate";
+            _typeNameTable[39] = "App1.UpdatePage";
+            _typeNameTable[40] = "System.Collections.ObjectModel.ObservableCollection`1<App1.Models.News>";
+            _typeNameTable[41] = "System.Collections.ObjectModel.Collection`1<App1.Models.News>";
+            _typeNameTable[42] = "App1.Models.News";
+            _typeNameTable[43] = "App1.Models.Paragraph";
+            _typeNameTable[44] = "Microsoft.Toolkit.Uwp.UI.Extensions.NavigationViewExtensions";
+            _typeNameTable[45] = "Windows.UI.Xaml.Controls.NavigationView";
 
-            _typeTable = new global::System.Type[44];
+            _typeTable = new global::System.Type[46];
             _typeTable[0] = typeof(global::App1.Article);
             _typeTable[1] = typeof(global::Windows.UI.Xaml.Controls.UserControl);
             _typeTable[2] = typeof(global::System.String);
             _typeTable[3] = typeof(global::App1.BackupPage);
             _typeTable[4] = typeof(global::Windows.UI.Xaml.Controls.Page);
             _typeTable[5] = typeof(global::App1.DefenderPage);
-            _typeTable[6] = typeof(global::Microsoft.Toolkit.Uwp.UI.Controls.DropShadowPanel);
-            _typeTable[7] = typeof(global::Windows.UI.Xaml.Controls.ContentControl);
-            _typeTable[8] = typeof(global::System.Double);
-            _typeTable[9] = typeof(global::Windows.UI.Color);
-            _typeTable[10] = typeof(global::System.ValueType);
-            _typeTable[11] = typeof(global::System.Object);
-            _typeTable[12] = typeof(global::Windows.UI.Composition.DropShadow);
-            _typeTable[13] = typeof(global::Windows.UI.Composition.CompositionShadow);
-            _typeTable[14] = typeof(global::Windows.UI.Composition.CompositionObject);
-            _typeTable[15] = typeof(global::Windows.UI.Composition.CompositionBrush);
-            _typeTable[16] = typeof(global::LottieUWP.LottieAnimationView);
-            _typeTable[17] = typeof(global::System.Int32);
-            _typeTable[18] = typeof(global::System.Boolean);
-            _typeTable[19] = typeof(global::LottieUWP.RepeatMode);
-            _typeTable[20] = typeof(global::System.Enum);
-            _typeTable[21] = typeof(global::LottieUWP.LottieAnimationView.CacheStrategy);
-            _typeTable[22] = typeof(global::LottieUWP.FontAssetDelegate);
-            _typeTable[23] = typeof(global::LottieUWP.TextDelegate);
-            _typeTable[24] = typeof(global::LottieUWP.LottieDrawable);
-            _typeTable[25] = typeof(global::LottieUWP.LottieComposition);
-            _typeTable[26] = typeof(global::System.Single);
-            _typeTable[27] = typeof(global::LottieUWP.IImageAssetDelegate);
-            _typeTable[28] = typeof(global::System.Int64);
-            _typeTable[29] = typeof(global::LottieUWP.PerformanceTracker);
-            _typeTable[30] = typeof(global::App1.MainPage);
-            _typeTable[31] = typeof(global::App1.SettingsPage);
-            _typeTable[32] = typeof(global::App1.TroubleshootPage);
-            _typeTable[33] = typeof(global::Microsoft.Toolkit.Uwp.UI.Controls.AdaptiveGridView);
-            _typeTable[34] = typeof(global::Windows.UI.Xaml.Controls.GridView);
-            _typeTable[35] = typeof(global::Windows.UI.Xaml.Controls.ItemsControl);
-            _typeTable[36] = typeof(global::System.Windows.Input.ICommand);
-            _typeTable[37] = typeof(global::Windows.UI.Xaml.Controls.ItemsPanelTemplate);
-            _typeTable[38] = typeof(global::App1.UpdatePage);
-            _typeTable[39] = typeof(global::System.Collections.ObjectModel.ObservableCollection<global::App1.Models.News>);
-            _typeTable[40] = typeof(global::System.Collections.ObjectModel.Collection<global::App1.Models.News>);
-            _typeTable[41] = typeof(global::App1.Models.News);
-            _typeTable[42] = typeof(global::Microsoft.Toolkit.Uwp.UI.Extensions.NavigationViewExtensions);
-            _typeTable[43] = typeof(global::Windows.UI.Xaml.Controls.NavigationView);
+            _typeTable[6] = typeof(global::App1.DetailPage);
+            _typeTable[7] = typeof(global::Microsoft.Toolkit.Uwp.UI.Controls.DropShadowPanel);
+            _typeTable[8] = typeof(global::Windows.UI.Xaml.Controls.ContentControl);
+            _typeTable[9] = typeof(global::System.Double);
+            _typeTable[10] = typeof(global::Windows.UI.Color);
+            _typeTable[11] = typeof(global::System.ValueType);
+            _typeTable[12] = typeof(global::System.Object);
+            _typeTable[13] = typeof(global::Windows.UI.Composition.DropShadow);
+            _typeTable[14] = typeof(global::Windows.UI.Composition.CompositionShadow);
+            _typeTable[15] = typeof(global::Windows.UI.Composition.CompositionObject);
+            _typeTable[16] = typeof(global::Windows.UI.Composition.CompositionBrush);
+            _typeTable[17] = typeof(global::LottieUWP.LottieAnimationView);
+            _typeTable[18] = typeof(global::System.Int32);
+            _typeTable[19] = typeof(global::System.Boolean);
+            _typeTable[20] = typeof(global::LottieUWP.RepeatMode);
+            _typeTable[21] = typeof(global::System.Enum);
+            _typeTable[22] = typeof(global::LottieUWP.LottieAnimationView.CacheStrategy);
+            _typeTable[23] = typeof(global::LottieUWP.FontAssetDelegate);
+            _typeTable[24] = typeof(global::LottieUWP.TextDelegate);
+            _typeTable[25] = typeof(global::LottieUWP.LottieDrawable);
+            _typeTable[26] = typeof(global::LottieUWP.LottieComposition);
+            _typeTable[27] = typeof(global::System.Single);
+            _typeTable[28] = typeof(global::LottieUWP.IImageAssetDelegate);
+            _typeTable[29] = typeof(global::System.Int64);
+            _typeTable[30] = typeof(global::LottieUWP.PerformanceTracker);
+            _typeTable[31] = typeof(global::App1.MainPage);
+            _typeTable[32] = typeof(global::App1.SettingsPage);
+            _typeTable[33] = typeof(global::App1.TroubleshootPage);
+            _typeTable[34] = typeof(global::Microsoft.Toolkit.Uwp.UI.Controls.AdaptiveGridView);
+            _typeTable[35] = typeof(global::Windows.UI.Xaml.Controls.GridView);
+            _typeTable[36] = typeof(global::Windows.UI.Xaml.Controls.ItemsControl);
+            _typeTable[37] = typeof(global::System.Windows.Input.ICommand);
+            _typeTable[38] = typeof(global::Windows.UI.Xaml.Controls.ItemsPanelTemplate);
+            _typeTable[39] = typeof(global::App1.UpdatePage);
+            _typeTable[40] = typeof(global::System.Collections.ObjectModel.ObservableCollection<global::App1.Models.News>);
+            _typeTable[41] = typeof(global::System.Collections.ObjectModel.Collection<global::App1.Models.News>);
+            _typeTable[42] = typeof(global::App1.Models.News);
+            _typeTable[43] = typeof(global::App1.Models.Paragraph);
+            _typeTable[44] = typeof(global::Microsoft.Toolkit.Uwp.UI.Extensions.NavigationViewExtensions);
+            _typeTable[45] = typeof(global::Windows.UI.Xaml.Controls.NavigationView);
         }
 
         private int LookupTypeIndexByName(string typeName)
@@ -332,27 +336,29 @@ namespace App1.App1_XamlTypeInfo
         private object Activate_0_Article() { return new global::App1.Article(); }
         private object Activate_3_BackupPage() { return new global::App1.BackupPage(); }
         private object Activate_5_DefenderPage() { return new global::App1.DefenderPage(); }
-        private object Activate_6_DropShadowPanel() { return new global::Microsoft.Toolkit.Uwp.UI.Controls.DropShadowPanel(); }
-        private object Activate_16_LottieAnimationView() { return new global::LottieUWP.LottieAnimationView(); }
-        private object Activate_22_FontAssetDelegate() { return new global::LottieUWP.FontAssetDelegate(); }
-        private object Activate_24_LottieDrawable() { return new global::LottieUWP.LottieDrawable(); }
-        private object Activate_25_LottieComposition() { return new global::LottieUWP.LottieComposition(); }
-        private object Activate_29_PerformanceTracker() { return new global::LottieUWP.PerformanceTracker(); }
-        private object Activate_30_MainPage() { return new global::App1.MainPage(); }
-        private object Activate_31_SettingsPage() { return new global::App1.SettingsPage(); }
-        private object Activate_32_TroubleshootPage() { return new global::App1.TroubleshootPage(); }
-        private object Activate_33_AdaptiveGridView() { return new global::Microsoft.Toolkit.Uwp.UI.Controls.AdaptiveGridView(); }
-        private object Activate_38_UpdatePage() { return new global::App1.UpdatePage(); }
-        private object Activate_39_ObservableCollection() { return new global::System.Collections.ObjectModel.ObservableCollection<global::App1.Models.News>(); }
-        private object Activate_40_Collection() { return new global::System.Collections.ObjectModel.Collection<global::App1.Models.News>(); }
-        private object Activate_42_NavigationViewExtensions() { return new global::Microsoft.Toolkit.Uwp.UI.Extensions.NavigationViewExtensions(); }
-        private void VectorAdd_39_ObservableCollection(object instance, object item)
+        private object Activate_6_DetailPage() { return new global::App1.DetailPage(); }
+        private object Activate_7_DropShadowPanel() { return new global::Microsoft.Toolkit.Uwp.UI.Controls.DropShadowPanel(); }
+        private object Activate_17_LottieAnimationView() { return new global::LottieUWP.LottieAnimationView(); }
+        private object Activate_23_FontAssetDelegate() { return new global::LottieUWP.FontAssetDelegate(); }
+        private object Activate_25_LottieDrawable() { return new global::LottieUWP.LottieDrawable(); }
+        private object Activate_26_LottieComposition() { return new global::LottieUWP.LottieComposition(); }
+        private object Activate_30_PerformanceTracker() { return new global::LottieUWP.PerformanceTracker(); }
+        private object Activate_31_MainPage() { return new global::App1.MainPage(); }
+        private object Activate_32_SettingsPage() { return new global::App1.SettingsPage(); }
+        private object Activate_33_TroubleshootPage() { return new global::App1.TroubleshootPage(); }
+        private object Activate_34_AdaptiveGridView() { return new global::Microsoft.Toolkit.Uwp.UI.Controls.AdaptiveGridView(); }
+        private object Activate_39_UpdatePage() { return new global::App1.UpdatePage(); }
+        private object Activate_40_ObservableCollection() { return new global::System.Collections.ObjectModel.ObservableCollection<global::App1.Models.News>(); }
+        private object Activate_41_Collection() { return new global::System.Collections.ObjectModel.Collection<global::App1.Models.News>(); }
+        private object Activate_43_Paragraph() { return new global::App1.Models.Paragraph(); }
+        private object Activate_44_NavigationViewExtensions() { return new global::Microsoft.Toolkit.Uwp.UI.Extensions.NavigationViewExtensions(); }
+        private void VectorAdd_40_ObservableCollection(object instance, object item)
         {
             var collection = (global::System.Collections.Generic.ICollection<global::App1.Models.News>)instance;
             var newItem = (global::App1.Models.News)item;
             collection.Add(newItem);
         }
-        private void VectorAdd_40_Collection(object instance, object item)
+        private void VectorAdd_41_Collection(object instance, object item)
         {
             var collection = (global::System.Collections.Generic.ICollection<global::App1.Models.News>)instance;
             var newItem = (global::App1.Models.News)item;
@@ -404,9 +410,16 @@ namespace App1.App1_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 6:   //  Microsoft.Toolkit.Uwp.UI.Controls.DropShadowPanel
+            case 6:   //  App1.DetailPage
+                userType = new global::App1.App1_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_6_DetailPage;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 7:   //  Microsoft.Toolkit.Uwp.UI.Controls.DropShadowPanel
                 userType = new global::App1.App1_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.ContentControl"));
-                userType.Activator = Activate_6_DropShadowPanel;
+                userType.Activator = Activate_7_DropShadowPanel;
                 userType.AddMemberName("BlurRadius");
                 userType.AddMemberName("ShadowOpacity");
                 userType.AddMemberName("OffsetX");
@@ -418,54 +431,54 @@ namespace App1.App1_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 7:   //  Windows.UI.Xaml.Controls.ContentControl
+            case 8:   //  Windows.UI.Xaml.Controls.ContentControl
                 xamlType = new global::App1.App1_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 8:   //  Double
+            case 9:   //  Double
                 xamlType = new global::App1.App1_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 9:   //  Windows.UI.Color
+            case 10:   //  Windows.UI.Color
                 userType = new global::App1.App1_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.ValueType"));
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 10:   //  System.ValueType
+            case 11:   //  System.ValueType
                 userType = new global::App1.App1_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
                 xamlType = userType;
                 break;
 
-            case 11:   //  Object
+            case 12:   //  Object
                 xamlType = new global::App1.App1_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 12:   //  Windows.UI.Composition.DropShadow
+            case 13:   //  Windows.UI.Composition.DropShadow
                 userType = new global::App1.App1_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Composition.CompositionShadow"));
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 13:   //  Windows.UI.Composition.CompositionShadow
+            case 14:   //  Windows.UI.Composition.CompositionShadow
                 userType = new global::App1.App1_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Composition.CompositionObject"));
                 xamlType = userType;
                 break;
 
-            case 14:   //  Windows.UI.Composition.CompositionObject
+            case 15:   //  Windows.UI.Composition.CompositionObject
                 userType = new global::App1.App1_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
                 xamlType = userType;
                 break;
 
-            case 15:   //  Windows.UI.Composition.CompositionBrush
+            case 16:   //  Windows.UI.Composition.CompositionBrush
                 userType = new global::App1.App1_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Composition.CompositionObject"));
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 16:   //  LottieUWP.LottieAnimationView
+            case 17:   //  LottieUWP.LottieAnimationView
                 userType = new global::App1.App1_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.UserControl"));
-                userType.Activator = Activate_16_LottieAnimationView;
+                userType.Activator = Activate_17_LottieAnimationView;
                 userType.AddMemberName("FileName");
                 userType.AddMemberName("RepeatCount");
                 userType.AddMemberName("AutoPlay");
@@ -495,27 +508,27 @@ namespace App1.App1_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 17:   //  Int32
+            case 18:   //  Int32
                 xamlType = new global::App1.App1_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 18:   //  Boolean
+            case 19:   //  Boolean
                 xamlType = new global::App1.App1_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 19:   //  LottieUWP.RepeatMode
+            case 20:   //  LottieUWP.RepeatMode
                 userType = new global::App1.App1_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
                 userType.AddEnumValue("Restart", global::LottieUWP.RepeatMode.Restart);
                 userType.AddEnumValue("Reverse", global::LottieUWP.RepeatMode.Reverse);
                 xamlType = userType;
                 break;
 
-            case 20:   //  System.Enum
+            case 21:   //  System.Enum
                 userType = new global::App1.App1_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.ValueType"));
                 xamlType = userType;
                 break;
 
-            case 21:   //  LottieUWP.LottieAnimationView.CacheStrategy
+            case 22:   //  LottieUWP.LottieAnimationView.CacheStrategy
                 userType = new global::App1.App1_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
                 userType.AddEnumValue("None", global::LottieUWP.LottieAnimationView.CacheStrategy.None);
                 userType.AddEnumValue("Weak", global::LottieUWP.LottieAnimationView.CacheStrategy.Weak);
@@ -523,74 +536,74 @@ namespace App1.App1_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 22:   //  LottieUWP.FontAssetDelegate
+            case 23:   //  LottieUWP.FontAssetDelegate
                 userType = new global::App1.App1_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 23:   //  LottieUWP.TextDelegate
+            case 24:   //  LottieUWP.TextDelegate
                 userType = new global::App1.App1_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 24:   //  LottieUWP.LottieDrawable
+            case 25:   //  LottieUWP.LottieDrawable
                 userType = new global::App1.App1_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.UserControl"));
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 25:   //  LottieUWP.LottieComposition
+            case 26:   //  LottieUWP.LottieComposition
                 userType = new global::App1.App1_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 26:   //  Single
+            case 27:   //  Single
                 xamlType = new global::App1.App1_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 27:   //  LottieUWP.IImageAssetDelegate
+            case 28:   //  LottieUWP.IImageAssetDelegate
                 userType = new global::App1.App1_XamlTypeInfo.XamlUserType(this, typeName, type, null);
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 28:   //  Int64
+            case 29:   //  Int64
                 xamlType = new global::App1.App1_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 29:   //  LottieUWP.PerformanceTracker
+            case 30:   //  LottieUWP.PerformanceTracker
                 userType = new global::App1.App1_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 30:   //  App1.MainPage
+            case 31:   //  App1.MainPage
                 userType = new global::App1.App1_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_30_MainPage;
+                userType.Activator = Activate_31_MainPage;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 31:   //  App1.SettingsPage
+            case 32:   //  App1.SettingsPage
                 userType = new global::App1.App1_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_31_SettingsPage;
+                userType.Activator = Activate_32_SettingsPage;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 32:   //  App1.TroubleshootPage
+            case 33:   //  App1.TroubleshootPage
                 userType = new global::App1.App1_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_32_TroubleshootPage;
+                userType.Activator = Activate_33_TroubleshootPage;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 33:   //  Microsoft.Toolkit.Uwp.UI.Controls.AdaptiveGridView
+            case 34:   //  Microsoft.Toolkit.Uwp.UI.Controls.AdaptiveGridView
                 userType = new global::App1.App1_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.GridView"));
-                userType.Activator = Activate_33_AdaptiveGridView;
+                userType.Activator = Activate_34_AdaptiveGridView;
                 userType.AddMemberName("OneRowModeEnabled");
                 userType.AddMemberName("ItemHeight");
                 userType.AddMemberName("DesiredWidth");
@@ -600,67 +613,77 @@ namespace App1.App1_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 34:   //  Windows.UI.Xaml.Controls.GridView
+            case 35:   //  Windows.UI.Xaml.Controls.GridView
                 xamlType = new global::App1.App1_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 35:   //  Windows.UI.Xaml.Controls.ItemsControl
+            case 36:   //  Windows.UI.Xaml.Controls.ItemsControl
                 xamlType = new global::App1.App1_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 36:   //  System.Windows.Input.ICommand
+            case 37:   //  System.Windows.Input.ICommand
                 userType = new global::App1.App1_XamlTypeInfo.XamlUserType(this, typeName, type, null);
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 37:   //  Windows.UI.Xaml.Controls.ItemsPanelTemplate
+            case 38:   //  Windows.UI.Xaml.Controls.ItemsPanelTemplate
                 xamlType = new global::App1.App1_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 38:   //  App1.UpdatePage
+            case 39:   //  App1.UpdatePage
                 userType = new global::App1.App1_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_38_UpdatePage;
+                userType.Activator = Activate_39_UpdatePage;
                 userType.AddMemberName("NewsList");
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 39:   //  System.Collections.ObjectModel.ObservableCollection`1<App1.Models.News>
+            case 40:   //  System.Collections.ObjectModel.ObservableCollection`1<App1.Models.News>
                 userType = new global::App1.App1_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Collections.ObjectModel.Collection`1<App1.Models.News>"));
-                userType.CollectionAdd = VectorAdd_39_ObservableCollection;
+                userType.CollectionAdd = VectorAdd_40_ObservableCollection;
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 40:   //  System.Collections.ObjectModel.Collection`1<App1.Models.News>
+            case 41:   //  System.Collections.ObjectModel.Collection`1<App1.Models.News>
                 userType = new global::App1.App1_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
-                userType.Activator = Activate_40_Collection;
-                userType.CollectionAdd = VectorAdd_40_Collection;
+                userType.Activator = Activate_41_Collection;
+                userType.CollectionAdd = VectorAdd_41_Collection;
                 xamlType = userType;
                 break;
 
-            case 41:   //  App1.Models.News
+            case 42:   //  App1.Models.News
                 userType = new global::App1.App1_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
                 userType.AddMemberName("_title");
                 userType.AddMemberName("_link");
                 userType.AddMemberName("_time");
                 userType.AddMemberName("_description");
                 userType.AddMemberName("_first_pic_url");
+                userType.AddMemberName("_summary");
+                userType.AddMemberName("_author");
+                userType.AddMemberName("_paragraph");
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 42:   //  Microsoft.Toolkit.Uwp.UI.Extensions.NavigationViewExtensions
+            case 43:   //  App1.Models.Paragraph
                 userType = new global::App1.App1_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
-                userType.Activator = Activate_42_NavigationViewExtensions;
+                userType.SetIsReturnTypeStub();
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 44:   //  Microsoft.Toolkit.Uwp.UI.Extensions.NavigationViewExtensions
+                userType = new global::App1.App1_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType.Activator = Activate_44_NavigationViewExtensions;
                 userType.AddMemberName("SelectedIndex");
                 userType.AddMemberName("CollapseOnClick");
                 userType.SetIsBindable();
                 xamlType = userType;
                 break;
 
-            case 43:   //  Windows.UI.Xaml.Controls.NavigationView
+            case 45:   //  Windows.UI.Xaml.Controls.NavigationView
                 xamlType = new global::App1.App1_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
             }
@@ -1146,19 +1169,49 @@ namespace App1.App1_XamlTypeInfo
             var that = (global::App1.Models.News)instance;
             that._first_pic_url = (global::System.String)Value;
         }
-        private object get_48_NavigationViewExtensions_SelectedIndex(object instance)
+        private object get_48_News__summary(object instance)
+        {
+            var that = (global::App1.Models.News)instance;
+            return that._summary;
+        }
+        private void set_48_News__summary(object instance, object Value)
+        {
+            var that = (global::App1.Models.News)instance;
+            that._summary = (global::System.String)Value;
+        }
+        private object get_49_News__author(object instance)
+        {
+            var that = (global::App1.Models.News)instance;
+            return that._author;
+        }
+        private void set_49_News__author(object instance, object Value)
+        {
+            var that = (global::App1.Models.News)instance;
+            that._author = (global::System.String)Value;
+        }
+        private object get_50_News__paragraph(object instance)
+        {
+            var that = (global::App1.Models.News)instance;
+            return that._paragraph;
+        }
+        private void set_50_News__paragraph(object instance, object Value)
+        {
+            var that = (global::App1.Models.News)instance;
+            that._paragraph = (global::App1.Models.Paragraph)Value;
+        }
+        private object get_51_NavigationViewExtensions_SelectedIndex(object instance)
         {
             return global::Microsoft.Toolkit.Uwp.UI.Extensions.NavigationViewExtensions.GetSelectedIndex((global::Windows.UI.Xaml.Controls.NavigationView)instance);
         }
-        private void set_48_NavigationViewExtensions_SelectedIndex(object instance, object Value)
+        private void set_51_NavigationViewExtensions_SelectedIndex(object instance, object Value)
         {
             global::Microsoft.Toolkit.Uwp.UI.Extensions.NavigationViewExtensions.SetSelectedIndex((global::Windows.UI.Xaml.Controls.NavigationView)instance, (global::System.Int32)Value);
         }
-        private object get_49_NavigationViewExtensions_CollapseOnClick(object instance)
+        private object get_52_NavigationViewExtensions_CollapseOnClick(object instance)
         {
             return global::Microsoft.Toolkit.Uwp.UI.Extensions.NavigationViewExtensions.GetCollapseOnClick((global::Windows.UI.Xaml.Controls.NavigationView)instance);
         }
-        private void set_49_NavigationViewExtensions_CollapseOnClick(object instance, object Value)
+        private void set_52_NavigationViewExtensions_CollapseOnClick(object instance, object Value)
         {
             global::Microsoft.Toolkit.Uwp.UI.Extensions.NavigationViewExtensions.SetCollapseOnClick((global::Windows.UI.Xaml.Controls.NavigationView)instance, (global::System.Boolean)Value);
         }
@@ -1475,21 +1528,39 @@ namespace App1.App1_XamlTypeInfo
                 xamlMember.Getter = get_47_News__first_pic_url;
                 xamlMember.Setter = set_47_News__first_pic_url;
                 break;
+            case "App1.Models.News._summary":
+                userType = (global::App1.App1_XamlTypeInfo.XamlUserType)GetXamlTypeByName("App1.Models.News");
+                xamlMember = new global::App1.App1_XamlTypeInfo.XamlMember(this, "_summary", "String");
+                xamlMember.Getter = get_48_News__summary;
+                xamlMember.Setter = set_48_News__summary;
+                break;
+            case "App1.Models.News._author":
+                userType = (global::App1.App1_XamlTypeInfo.XamlUserType)GetXamlTypeByName("App1.Models.News");
+                xamlMember = new global::App1.App1_XamlTypeInfo.XamlMember(this, "_author", "String");
+                xamlMember.Getter = get_49_News__author;
+                xamlMember.Setter = set_49_News__author;
+                break;
+            case "App1.Models.News._paragraph":
+                userType = (global::App1.App1_XamlTypeInfo.XamlUserType)GetXamlTypeByName("App1.Models.News");
+                xamlMember = new global::App1.App1_XamlTypeInfo.XamlMember(this, "_paragraph", "App1.Models.Paragraph");
+                xamlMember.Getter = get_50_News__paragraph;
+                xamlMember.Setter = set_50_News__paragraph;
+                break;
             case "Microsoft.Toolkit.Uwp.UI.Extensions.NavigationViewExtensions.SelectedIndex":
                 userType = (global::App1.App1_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Toolkit.Uwp.UI.Extensions.NavigationViewExtensions");
                 xamlMember = new global::App1.App1_XamlTypeInfo.XamlMember(this, "SelectedIndex", "Int32");
                 xamlMember.SetTargetTypeName("Windows.UI.Xaml.Controls.NavigationView");
                 xamlMember.SetIsAttachable();
-                xamlMember.Getter = get_48_NavigationViewExtensions_SelectedIndex;
-                xamlMember.Setter = set_48_NavigationViewExtensions_SelectedIndex;
+                xamlMember.Getter = get_51_NavigationViewExtensions_SelectedIndex;
+                xamlMember.Setter = set_51_NavigationViewExtensions_SelectedIndex;
                 break;
             case "Microsoft.Toolkit.Uwp.UI.Extensions.NavigationViewExtensions.CollapseOnClick":
                 userType = (global::App1.App1_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Toolkit.Uwp.UI.Extensions.NavigationViewExtensions");
                 xamlMember = new global::App1.App1_XamlTypeInfo.XamlMember(this, "CollapseOnClick", "Boolean");
                 xamlMember.SetTargetTypeName("Windows.UI.Xaml.Controls.NavigationView");
                 xamlMember.SetIsAttachable();
-                xamlMember.Getter = get_49_NavigationViewExtensions_CollapseOnClick;
-                xamlMember.Setter = set_49_NavigationViewExtensions_CollapseOnClick;
+                xamlMember.Getter = get_52_NavigationViewExtensions_CollapseOnClick;
+                xamlMember.Setter = set_52_NavigationViewExtensions_CollapseOnClick;
                 break;
             }
             return xamlMember;

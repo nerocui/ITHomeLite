@@ -29,10 +29,14 @@ namespace App1
         /// Initializes the singleton application object.  This is the first line of authored code
         /// executed, and as such is the logical equivalent of main() or WinMain().
         /// </summary>
+        /// 
+
+        public static bool refreshed;
         public App()
         {
             this.InitializeComponent();
             this.Suspending += OnSuspending;
+            refreshed = false;
         }
 
         /// Extend acrylic into the title bar. 

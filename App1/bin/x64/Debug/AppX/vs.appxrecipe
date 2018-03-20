@@ -19,7 +19,7 @@
     <DeployOptionalPackages>false</DeployOptionalPackages>
     <WindowsSdkPath>C:\Program Files %28x86%29\Windows Kits\10\</WindowsSdkPath>
     <LayoutDir>C:\Users\Nero\source\repos\App1\App1\bin\x64\Debug\AppX</LayoutDir>
-    <RegisteredManifestChecksum>756E6354606AE4304106F423E376A1D1A7D792123B116021D68D89594EAFA04D</RegisteredManifestChecksum>
+    <RegisteredManifestChecksum>279B295BF7456A39441B808EDAE90F6261295E287540B828F219546C6E9079C2</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>c66c233a-a83a-4adf-b7ff-863bb91da2f3_1.0.0.0_x64__4rfaxb3w47zzt</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>c66c233a-a83a-4adf-b7ff-863bb91da2f3_4rfaxb3w47zzt!App</RegisteredUserModeAppID>
     <RegisteredPackageID>c66c233a-a83a-4adf-b7ff-863bb91da2f3</RegisteredPackageID>
@@ -31,13 +31,13 @@
     <AppXManifest Include="C:\Users\Nero\source\repos\App1\App1\bin\x64\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-03-16T10:16:50.496</Modified>
+      <Modified>2018-03-20T22:37:47.971</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\Nero\source\repos\App1\App1\bin\x64\Debug\App1.exe">
       <PackagePath>entrypoint\App1.exe</PackagePath>
-      <Modified>2018-03-16T10:16:46.301</Modified>
+      <Modified>2018-03-20T22:37:46.600</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Nero\.nuget\packages\colorcode.core\2.0.3\lib\netstandard1.4\ColorCode.Core.dll">
       <PackagePath>ColorCode.Core.dll</PackagePath>
@@ -787,6 +787,10 @@
       <PackagePath>Assets\empty_status.json</PackagePath>
       <Modified>2018-03-16T10:14:49.927</Modified>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Nero\source\repos\App1\App1\Assets\phonological.json">
+      <PackagePath>Assets\phonological.json</PackagePath>
+      <Modified>2018-03-20T00:25:54.999</Modified>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Nero\source\repos\App1\App1\Assets\beupic.jpg">
       <PackagePath>Assets\beupic.jpg</PackagePath>
       <Modified>2018-03-13T22:41:15.974</Modified>
@@ -839,7 +843,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Nero\source\repos\App1\App1\bin\x64\Debug\App1.xr.xml">
       <PackagePath>App1.xr.xml</PackagePath>
-      <Modified>2018-03-16T10:16:45.869</Modified>
+      <Modified>2018-03-20T21:42:08.025</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.16299.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -1008,11 +1012,11 @@
     <AppxPackagedFile Include="C:\Users\Nero\source\repos\App1\App1\bin\x64\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-03-16T10:16:47.451</Modified>
+      <Modified>2018-03-20T22:37:47.167</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Nero\source\repos\App1\App1\bin\x64\Debug\Core\App1.exe">
       <PackagePath>App1.exe</PackagePath>
-      <Modified>2018-03-16T10:16:50.480</Modified>
+      <Modified>2018-03-20T22:37:47.966</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

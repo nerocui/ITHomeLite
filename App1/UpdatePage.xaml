@@ -8,42 +8,56 @@
     xmlns:an="using:Microsoft.Toolkit.Uwp.UI.Animations"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     Loaded="Page_Loaded"
-    xmlns:lottieUwp="using:LottieUWP"
+    RequestedTheme="Light"
     mc:Ignorable="d">
 
 
     <Page.Resources>
         <DataTemplate x:DataType="local:News" x:Key="NewsTemplate">
-            <Button Background="Transparent"
-                    Style="{StaticResource ButtonRevealStyle}"
-                    BorderThickness="0"
-                    Margin="0">
-                <Grid>
-                    <Image Source="{x:Bind _first_pic_url}"
+
+            <Grid Margin="0" BorderThickness="0" x:Name="UpdateItem">
+                <Image Source="{x:Bind _first_pic_url}"
                                    x:Name="ArticleImg"
                                    HorizontalAlignment="Center"
                                    VerticalAlignment="Center"
                                    Stretch="UniformToFill"/>
-                    <Grid HorizontalAlignment="Left"
-                                  VerticalAlignment="Top"
-                                  Background="{ThemeResource SystemControlAccentAcrylicElementAccentMediumHighBrush}"
-                                  Margin="0,20,0,0">
-                        <TextBlock Text="{x:Bind _time}"
-                                           FontSize="14"/>
-                    </Grid>
+                <Grid HorizontalAlignment="Left"
+                      VerticalAlignment="Top"
+                      Background="{ThemeResource SystemControlAccentAcrylicElementAccentMediumHighBrush}"
+                      Margin="0,20,0,0">
+                    <TextBlock Text="{x:Bind _time}"
+                               Margin="6,3,6,3"
+                               FontSize="14"/>
+                </Grid>
 
-                    <Grid HorizontalAlignment="Stretch" VerticalAlignment="Bottom"
-                                  Padding="3"
-                                    Background="{ThemeResource SystemControlChromeHighAcrylicElementMediumBrush }">
-                        <TextBlock Text="{x:Bind _title}" 
-                                           HorizontalAlignment="Center" 
-                                           VerticalAlignment="Bottom"
-                                           TextWrapping="Wrap"
-                                           FontSize="16"/>
-                    </Grid>
+                <Grid HorizontalAlignment="Stretch" 
+                      VerticalAlignment="Bottom"
+                      Padding="3"
+                      x:Name="UpdateItemBottomPanel"
+                      Background="{ThemeResource SystemControlChromeHighAcrylicElementMediumBrush}">
+                    <StackPanel>
+
+                        <TextBlock Text="{x:Bind _title}"
+                                       x:Name="UpdateTitle"
+                                       HorizontalAlignment="Center" 
+                                       VerticalAlignment="Bottom"
+                                       TextWrapping="Wrap"
+                                       FontSize="16"/>
+
+                        <TextBlock Text="{x:Bind _summary}"
+                                       Padding="3"
+                                       HorizontalAlignment="Stretch"
+                                       VerticalAlignment="Bottom"
+                                       TextWrapping="Wrap"
+                                       MaxLines="3"
+                                       Height="50"
+                                       FontSize="10"
+                                   Foreground="Gray"/>
+                    </StackPanel>
 
                 </Grid>
-            </Button>
+
+            </Grid>
         </DataTemplate>
     </Page.Resources>
 
@@ -51,25 +65,27 @@
 
         <controls:AdaptiveGridView Name="AdaptiveGridViewControl"
                                    OneRowModeEnabled="False"
-                                   ItemHeight="200"
+                                   ItemHeight="250"
                                    DesiredWidth="300"
                                    SelectionMode="Single"
+                                   
+                                   Loaded="AdaptiveGridViewControl_Loaded"
                                    IsItemClickEnabled="True"
                                    ItemsSource="{x:Bind NewsList}"
                                    ItemClick="AdaptiveGridViewControl_ItemClick"
                                    ItemTemplate="{StaticResource NewsTemplate}">
-            
+
 
         </controls:AdaptiveGridView>
-        
+
         <ProgressRing Name="MyProgressRing"
-                      Width="100"
+                      Width="50"
                       Visibility="Collapsed"
                       Opacity="1"
-                      Height="100"
-                      Foreground="White"
+                      Height="50"
+                      Foreground="Red"
                       VerticalAlignment="Center"
                       HorizontalAlignment="Center" />
-        
+
     </Grid>
 </Page>

@@ -14,41 +14,29 @@ namespace App1.Models
         public string _time { set; get; }
         public string _description { set; get; }
         public string _first_pic_url { set; get; }
-        
+        public string _summary { set; get; }
+        public string _author { set; get; }
+        public Paragraph _paragraph { set; get; }
 
-        public News(string title, string link, string time, string description)
+        public News(string title, string link, string time, string description, string img_url, string summary, string author)
         {
             _title = title;
             _link = link;
             _time = time;
-            int len = description.Length-12;
-            string temp = description.Substring(9, len);
-            _description = temp;
-            
+            _description = description;
             try
             {
-                var doc = new HtmlDocument();
-                doc.LoadHtml(temp);
-                var items = doc.DocumentNode.Descendants();
-                foreach (var de in items)
-                {
-                    if (de.Name.Equals("img") && !de.Attributes["src"].Value.ToString().Equals(""))
-                    {
-                        _first_pic_url = de.Attributes["src"].Value.ToString();
-                        break;
-                    }
-                    else
-                    {
-                        _first_pic_url = "ms-appx:///Assets/itnews.jpg";
-
-                    }
-
-                }
-            }
-            catch (Exception)
-            {
+                if(!img_url.Equals(""))
+                    _first_pic_url = img_url;
+                else _first_pic_url = "ms-appx:///Assets/itnews.jpg";
+            } catch (NullReferenceException) {
+                
                 _first_pic_url = "ms-appx:///Assets/itnews.jpg";
             }
+            _summary = summary;
+            _author = author;
+            NewsParser p = new NewsParser();
+            _paragraph = p.parse(_description);
         }
     }
 }

@@ -20842,6 +20842,7 @@
       "HtmlAgilityPack >= 1.7.1",
       "LottieUWP >= 2.5.1",
       "Microsoft.NETCore.UniversalWindowsPlatform >= 6.0.8",
+      "Microsoft.Toolkit.Parsers >= 2.2.0",
       "Microsoft.Toolkit.Uwp.UI.Animations >= 2.2.0",
       "Microsoft.Toolkit.Uwp.UI.Controls >= 2.2.0"
     ]
@@ -20897,6 +20898,10 @@
           "Microsoft.NETCore.UniversalWindowsPlatform": {
             "target": "Package",
             "version": "[6.0.8, )"
+          },
+          "Microsoft.Toolkit.Parsers": {
+            "target": "Package",
+            "version": "[2.2.0, )"
           },
           "Microsoft.Toolkit.Uwp.UI.Animations": {
             "target": "Package",
